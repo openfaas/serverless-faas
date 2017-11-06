@@ -13,7 +13,7 @@ cd ..
 
 # Copy in node_modules and faas provider developer version
 cp -r node_modules driver/faas-func/
-cp -r faas driver/faas-func/node_modules/serverless-faas
+cp -r lib driver/faas-func/node_modules/serverless-faas
 
 cd driver/faas-func
 #node --inspect-brk=0.0.0.0:9229 /home/austin/.nvm/versions/node/v8.4.0/bin/sls package
