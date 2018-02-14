@@ -1,5 +1,5 @@
 {
-  "name": "serverless-openfaas",
+  "name": "serverless-faas",
   "version": "1.0.0",
   "description": "A provider plugin for the Serverless Inc framework (work-in-progress)",
   "main": "lib/index.js",

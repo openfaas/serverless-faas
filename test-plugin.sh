@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# link the plugin to be available for development
+npm link
+
 # clear out previous driver / test-run
 rm -rf driver
 
@@ -11,11 +14,9 @@ serverless install --url https://github.com/aafrey/openfaas-nodejs --name faas-f
 
 cd ..
 
-# Copy in node_modules and faas provider developer version
-cp -r node_modules driver/faas-func/
-cp -r lib driver/faas-func/node_modules/serverless-faas
-
+# link the plugin with the template
 cd driver/faas-func
+npm link serverless-faas
 #node --inspect-brk=0.0.0.0:9229 /home/austin/.nvm/versions/node/v8.4.0/bin/sls package
 
 # Run the workflow
